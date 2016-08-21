@@ -27,7 +27,7 @@ $recipient = $matches[1];
 
 // ensure email is only sent once
 if (!isset($emailDb[$recipient])) {
-    $subject = $settings['subject'];
+    $subject = $settings->subject;
     $header = 'From: ' . $settings->sender . "\r\n" .
         'X-Mailer: Vacation';
 
