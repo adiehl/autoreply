@@ -1,0 +1,4 @@
+{
+  "sender" : "email@example.com",
+  "subject" : "Re: {SUBJECT} [AUTOREPLY]"
+}
