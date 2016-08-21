@@ -4,6 +4,7 @@ First, clone this project and edit the .forward file
 ```sh
 $ cd ~
 $ git clone https://github.com/adiehl/autoreply.git
+$ chmod 755 autoreply/autoreply.php
 $ vim .forward
 ```
 Put this single line into the forward file:
