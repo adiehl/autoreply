@@ -22,8 +22,8 @@ preg_match('/From ([A-Za-z0-9.-]+@[A-Za-z0-9.-]+)  /', $data, $matches);
 $recipient = $matches[1];
 
 // ensure email is only sent once
-if (!$emailDb[$recipient]) {
-    $subject = 'Out of office';
+if (!isset($emailDb[$recipient])) {
+    $subject = $settings['subject'];
     $header = 'From: ' . $settings->sender . "\r\n" .
         'X-Mailer: Vacation';
 
