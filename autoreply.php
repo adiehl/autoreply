@@ -13,7 +13,11 @@ $message = file_get_contents(__DIR__ . DIRECTORY_SEPARATOR . 'message.txt');
 // read the email
 $data = stream_get_contents(STDIN);
 try {
-    $emailDb = unserialize(file_get_contents(__DIR__ . DIRECTORY_SEPARATOR . 'database.json'));
+    if (file_exists(__DIR__ . DIRECTORY_SEPARATOR . 'database.json')) {
+        $emailDb = unserialize(file_get_contents(__DIR__ . DIRECTORY_SEPARATOR . 'database.json'));
+    } else {
+        $emailDb = [];
+    }
 } catch (Exception $e) {
     $emailDb = [];
 }
